@@ -55,9 +55,7 @@ input::-moz-focus-inner {
 
 input, select, textarea {
   -moz-appearance: none;
-  -webkit-appearance: none;
-  -ms-appearance: none;
-  appearance: none; }
+  -ms-appearance: none; }
 
 /* Basic */
 html {
@@ -1191,3 +1189,8 @@ ul.link-list li {
     line-height: 1.5em; }
     #copyright a {
       color: #A6A88F; } }
+
+.div-box {
+  padding: 15px 0; }
+  .div-box label {
+    display: block; }
