@@ -36,8 +36,8 @@ namespace myTestASPNETCoreSite.Areas.Admin.Controllers
             {
                 if (titleImageFile != null)
                 {
-                    model.TitleImagePath = titleImageFile.FileName;
-                    using (var stream = new FileStream(Path.Combine(hostEnvironment.WebRootPath, "images/", titleImageFile.FileName), FileMode.Create))
+                    model.TitleImagePath = Path.GetFileName(titleImageFile.FileName);
+                    using (var stream = new FileStream(Path.Combine(hostEnvironment.WebRootPath, "images/", Path.GetFileName(titleImageFile.FileName)), FileMode.Create))
                     {
                         titleImageFile.CopyTo(stream);
                     }
